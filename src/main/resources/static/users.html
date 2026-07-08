@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户管理</title>
+    <link rel="stylesheet" href="./admin.css">
+    <style>
+        .users-table { width:100%; border-collapse:collapse; }
+        .users-table th, .users-table td { padding:12px; border-bottom:1px solid #e0e0e0; text-align:left; }
+        .users-actions { display:flex; gap:8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>用户管理</h1>
+            <p>列出所有注册用户，管理员可以删除用户。</p>
+            <div style="margin-top:8px;">
+                <a class="btn btn-info" href="./admin.html" style="text-decoration:none; color:#fff; padding:6px 10px; border-radius:4px;">返回后台</a>
+            </div>
+        </div>
+
+        <div class="form-section" style="margin-top:20px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <h2 class="section-title" style="margin:0;">用户列表</h2>
+                <div>
+                    <button class="btn btn-success btn-small" id="refresh-users">刷新</button>
+                </div>
+            </div>
+
+            <div id="users-container">
+                <table class="users-table">
+                    <thead>
+                        <tr>
+                            <th>用户名</th>
+                            <th>显示名</th>
+                            <th>用户ID</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="users-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast-root"></div>
+
+    <script src="./users.js"></script>
+</body>
+</html>

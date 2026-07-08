@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📜 我的订单 / 历史订单</h1>
+        <p>查看已结算的订单记录</p>
+        <div style="margin-top:8px;">
+            <a class="btn btn-secondary" href="./admin.html" style="text-decoration:none; color:#fff; padding:6px 10px; border-radius:4px;">返回管理</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="table-section">
+            <h2 class="section-title">订单列表</h2>
+            <div id="orders-container">
+                <table class="product-table" id="orders-table">
+                    <thead>
+                        <tr>
+                            <th>订单ID</th>
+                            <th>用户ID</th>
+                            <th>创建时间</th>
+                            <th>总价</th>
+                            <th>条目</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-tbody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-message">操作成功！</span>
+</div>
+
+<script src="./orders.js"></script>
+</body>
+</html>
